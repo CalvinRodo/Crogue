@@ -33,17 +33,17 @@ class Game(object):
 
 		#movement keys
 		if libtcod.console_is_key_pressed(libtcod.KEY_UP):
-			self.player.move(self.map,0,-1)
-			self.fov_recompute = True
+			self.move_player(0,-1)
 		elif libtcod.console_is_key_pressed(libtcod.KEY_DOWN):
-			self.player.move(self.map,0,1)       
-			self.fov_recompute = True
+			self.move_player(0,1)
 		elif libtcod.console_is_key_pressed(libtcod.KEY_LEFT):
-			self.player.move(self.map,-1,0) 
-			self.fov_recompute = True
+			self.move_player(-1,0)
 		elif libtcod.console_is_key_pressed(libtcod.KEY_RIGHT):
-			self.player.move(self.map,1,0)
-			self.fov_recompute = True
+			self.move_player(1,0)
+
+	def move_player(self, x, y):
+		self.player.move(self.map,x,y)
+		self.fov_recompute = True
 
 	def render_all(self):
 			for object in self.objects:
@@ -59,7 +59,6 @@ class Game(object):
 		while not libtcod.console_is_window_closed():
 			libtcod.console_set_foreground_color(self.con, libtcod.white)
 			self.render_all()
-
 			
 			libtcod.console_flush()    
 
@@ -67,6 +66,7 @@ class Game(object):
 				object.clear(self.con)
 
 			exit = self.handle_keys()
+			
 			if exit:
 				break		
 
