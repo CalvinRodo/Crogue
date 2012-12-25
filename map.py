@@ -1,6 +1,6 @@
 import libtcodpy as libtcod
 from rect import Rect
-from Tile import Tile
+from tile import Tile
 
 class Map(object):
   def __init__(self,width, height):
