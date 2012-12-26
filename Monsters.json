@@ -13,6 +13,11 @@
             "Name" : "Amy",
             "Description" : "My Fiance",
             "Tile" : "A"
+        },
+        {
+            "Name" : "ZwartePiet",
+            "Description" : "I swear I'm not racist",
+            "Tile" : "Z"
         }
     ]
 }

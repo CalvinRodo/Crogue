@@ -2,28 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" name="Default" comment="Fixing map that I broke with last commit&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/displaychars.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MessageDisplay.py" afterPath="$PROJECT_DIR$/MessageDisplay.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Monsters.json" afterPath="$PROJECT_DIR$/Monsters.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crogue.py" afterPath="$PROJECT_DIR$/crogue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tile.py" afterPath="$PROJECT_DIR$/tile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Crogue.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356470383447" ignored="false" />
+    <file path="/Dummy.txt" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356487861806" ignored="false" />
     <file path="/libtcodpy.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356210214584" ignored="false" />
-    <file path="/fragment.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356482718193" ignored="false" />
-    <file path="/crogue.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356486303270" ignored="false" />
+    <file path="/fragment.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356492820117" ignored="false" />
+    <file path="/crogue.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356496152427" ignored="false" />
     <file path="/map.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356470396709" ignored="false" />
     <file path="/gobject.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356486898471" ignored="false" />
     <file path="/a.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356455223491" ignored="false" />
     <file path="/player.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356378090861" ignored="false" />
-    <file path="/Monsters.json" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356472248377" ignored="false" />
+    <file path="/Monsters.json" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356487958316" ignored="false" />
     <file path="/rect.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356462437706" ignored="false" />
     <file path="/Python Console" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356465081184" ignored="false" />
-    <file path="/fragment.java" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356467505099" ignored="false" />
+    <file path="/fragment.java" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356491016088" ignored="false" />
     <file path="/FeatureBroker.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356479060364" ignored="false" />
     <file path="/di.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356478737285" ignored="false" />
-    <file path="/MessageDisplay.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356486048858" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356487010558" ignored="false" />
+    <file path="/MessageDisplay.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356495618817" ignored="false" />
     <file path="/tile.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356487007378" ignored="false" />
+    <file path="/*.regexp" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356488588028" ignored="false" />
+    <file path="/displaychars.py" changelist="5d54b5aa-5504-425e-bd3d-1b44b71ad2b2" time="1356493271724" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -78,6 +81,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -90,16 +94,26 @@
       <file leaf-file-name="crogue.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crogue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="20" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.57178843">
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#2553#3233#0" expanded="false" />
-                <element signature="e#3267#3585#0" expanded="false" />
-                <element signature="e#3614#3969#0" expanded="false" />
-                <element signature="e#4002#4353#0" expanded="false" />
-                <element signature="e#4386#4565#0" expanded="false" />
-                <element signature="e#4602#4655#0" expanded="false" />
-              </folding>
+            <state line="174" column="31" selection-start="5452" selection-end="5452" vertical-scroll-proportion="0.25188917">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageDisplay.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MessageDisplay.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="107" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libtcodpy.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libtcodpy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="756" column="4" selection-start="21825" selection-end="21825" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,37 +121,7 @@
       <file leaf-file-name="gobject.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gobject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-                <element signature="e#1520#1688#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8x8.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/fonts/8x8.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageDisplay.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MessageDisplay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="45" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#22#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="di.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/di.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="31" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="21" column="10" selection-start="667" selection-end="809" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -174,13 +158,14 @@
         <option value="$PROJECT_DIR$/Tile.java" />
         <option value="$PROJECT_DIR$/Tile.py" />
         <option value="$PROJECT_DIR$/map.py" />
-        <option value="$PROJECT_DIR$/Monsters.json" />
         <option value="$PROJECT_DIR$/FeatureBroker.py" />
         <option value="$PROJECT_DIR$/di.py" />
-        <option value="$PROJECT_DIR$/MessageDisplay.py" />
-        <option value="$PROJECT_DIR$/crogue.py" />
         <option value="$PROJECT_DIR$/gobject.py" />
         <option value="$PROJECT_DIR$/tile.py" />
+        <option value="$PROJECT_DIR$/Monsters.json" />
+        <option value="$PROJECT_DIR$/displaychars.py" />
+        <option value="$PROJECT_DIR$/MessageDisplay.py" />
+        <option value="$PROJECT_DIR$/crogue.py" />
       </list>
     </option>
   </component>
@@ -258,15 +243,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/displaychars.py" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -295,9 +282,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:/Python33/python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <module name="Crogue" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crogue.py" />
@@ -328,6 +315,14 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -341,14 +336,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
@@ -410,8 +397,28 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.crogue" />
+    <configuration default="false" name="Tools" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:/Python33/python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="Crogue" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/displaychars.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.Tools" />
+      <item index="1" class="java.lang.String" itemvalue="Python.crogue" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -499,10 +506,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24318182" sideWeight="0.21885522" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09242424" sideWeight="0.7097315" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09621212" sideWeight="0.7097315" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.26363635" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24545455" sideWeight="0.7097315" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29026845" sideWeight="0.48181817" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24545455" sideWeight="0.7097315" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29026845" sideWeight="0.48181817" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -571,17 +578,22 @@
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/MessageDisplay.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="52" />
+          <url>file://$PROJECT_DIR$/crogue.py</url>
+          <line>149</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/crogue.py</url>
-          <line>135</line>
-          <option name="timeStamp" value="53" />
+          <line>93</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/displaychars.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="64" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -589,40 +601,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.IntelliJIdea12/config/plugins/python/helpers/pydev/pydevd_breakpoints.py">
+    <entry file="file://$PROJECT_DIR$/crogue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crogue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#2553#3233#0" expanded="false" />
-            <element signature="e#3267#3585#0" expanded="false" />
-            <element signature="e#3614#3969#0" expanded="false" />
-            <element signature="e#4002#4353#0" expanded="false" />
-            <element signature="e#4386#4565#0" expanded="false" />
-            <element signature="e#4602#4655#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crogue.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="10" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#2553#3233#0" expanded="false" />
-            <element signature="e#3267#3585#0" expanded="false" />
-            <element signature="e#3614#3969#0" expanded="false" />
-            <element signature="e#4002#4353#0" expanded="false" />
-            <element signature="e#4386#4565#0" expanded="false" />
-            <element signature="e#4602#4655#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +627,38 @@
     </entry>
     <entry file="file://$USER_HOME$/.IntelliJIdea12/config/plugins/python/helpers/pydev/pydevd_breakpoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+        <state line="80" column="0" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="38" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="11" selection-start="796" selection-end="796" vertical-scroll-proportion="1.1989925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monsters.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="53" selection-start="501" selection-end="501" vertical-scroll-proportion="0.77078086">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/fonts/8x8.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/di.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="31" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -652,77 +672,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libtcodpy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="931" column="0" selection-start="28126" selection-end="28126" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monsters.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="391" selection-end="391" vertical-scroll-proportion="0.59949625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/di.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="31" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MessageDisplay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="45" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#22#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/fonts/8x8.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="11" selection-start="796" selection-end="796" vertical-scroll-proportion="1.1989925">
+        <state line="756" column="4" selection-start="21825" selection-end="21825" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gobject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0">
+        <state line="21" column="10" selection-start="667" selection-end="809" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/displaychars.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="41" selection-start="447" selection-end="447" vertical-scroll-proportion="0.2720403">
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
-            <element signature="e#1520#1688#0" expanded="false" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MessageDisplay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="107" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crogue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="20" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.57178843">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#2553#3233#0" expanded="false" />
-            <element signature="e#3267#3585#0" expanded="false" />
-            <element signature="e#3614#3969#0" expanded="false" />
-            <element signature="e#4002#4353#0" expanded="false" />
-            <element signature="e#4386#4565#0" expanded="false" />
-            <element signature="e#4602#4655#0" expanded="false" />
-          </folding>
+        <state line="174" column="31" selection-start="5452" selection-end="5452" vertical-scroll-proportion="0.25188917">
+          <folding />
         </state>
       </provider>
     </entry>

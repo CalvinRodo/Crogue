@@ -18,6 +18,10 @@ class Game(object):
     self.gamefont = sys.path[0] + '/data/fonts/' + font
     self.map = Map(80,45)
     self.fov_recompute = True
+
+    self.game_state = "playing"
+    self.player_action = None
+
     #create the root console
     libtcod.console_set_custom_font(self.gamefont.encode('utf-8'), libtcod.FONT_TYPE_GREYSCALE | libtcod.FONT_LAYOUT_ASCII_INROW)
     libtcod.console_init_root(self.screen_width, self.screen_height, 'crogue'.encode('utf-8'), False)
@@ -55,27 +59,37 @@ class Game(object):
     for i in range(100):
       self.add_object_to_map(Item(0,0))
 
+  def move_player(self, x, y):
+    self.player.move(self.map, x, y)
+    self.fov_recompute = True
+
   def handle_keys(self):
     key = libtcod.console_wait_for_keypress(True)
     if key.vk == libtcod.KEY_ENTER and key.lalt:
       #Alt+Enter: toggle fullscreen
       libtcod.console_set_fullscreen(not libtcod.console_is_fullscreen())
     elif key.vk == libtcod.KEY_ESCAPE:
-      return True  #exit game
+      return "exit"  #exit game
+    elif key.vk == libtcod.KEY_F1:
+      if self.game_state == "not-playing":
+        self.game_state = "playing"
+        return "exit-debug-screen"
+      self.game_state = "not-playing"
+      return "debug-screen"
 
-    #movement keys
+    if self.game_state != "playing":
+      return
+
     if libtcod.console_is_key_pressed(libtcod.KEY_UP):
-      self.player.move(self.map,0,-1)
-      self.fov_recompute = True
+      self.move_player(0,-1)
     elif libtcod.console_is_key_pressed(libtcod.KEY_DOWN):
-      self.player.move(self.map,0,1)
-      self.fov_recompute = True
+      self.move_player(0,1)
     elif libtcod.console_is_key_pressed(libtcod.KEY_LEFT):
-      self.player.move(self.map,-1,0)
-      self.fov_recompute = True
+      self.move_player(-1,0)
     elif libtcod.console_is_key_pressed(libtcod.KEY_RIGHT):
-      self.player.move(self.map,1,0)
-      self.fov_recompute = True
+      self.move_player(1,0)
+    else:
+      return "didn't-move"
 
   def render_all(self):
     self.render_timer1 = libtcod.sys_elapsed_milli()
@@ -117,13 +131,13 @@ class Game(object):
       for object in self.objects:
         object.clear(self.con)
 
-      exit = self.handle_keys()
+      self.player_action = self.handle_keys()
 
       self.update_objects()
 
       self.render_timers()
 
-      if exit:
+      if self.player_action == "exit":
         break
 
   def render_timers(self):
@@ -142,8 +156,33 @@ class Game(object):
 
   def register_services(self):
     self.di.Register("Console", lambda: MessageDisplay())
+    self.di.Register("Gui", lambda: Gui())
 
 
+class Gui(object):
+  _nwcorner = chr(201)
+  _necorner = chr(187)
+  _swcorner = chr(200)
+  _secorner = chr(188)
+  _vert = chr(205)
+  _hori = chr(186)
+  def draw_box(self, con, x, y, w, h):
+
+    libtcod.console_put_char(con,x,y,Gui._nwcorner)
+    libtcod.console_put_char(con,x,h,Gui._swcorner)
+    libtcod.console_put_char(con,w,y,Gui._necorner)
+    libtcod.console_put_char(con,w,h,Gui._secorner)
+    self.draw_vert(con,x + 1, y, w - 1)
+    self.draw_hori(con,x, y + 1,h - 1)
+
+
+  def draw_vert(self, con, x, y, w):
+    for i in range(w - x):
+      libtcod.console_put_char(con,i,y,Gui._vert)
+
+  def draw_hori(self, con, x, y, h):
+    for i in range(h - y):
+      libtcod.console_put_char(con,x,i,Gui._hori)
 
 g = Game('8x8.png')
 g.main_loop()
