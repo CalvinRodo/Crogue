@@ -118,8 +118,11 @@ class Game(object):
         object.clear(self.con)
 
       exit = self.handle_keys()
+
       self.update_objects()
+
       self.render_timers()
+
       if exit:
         break
 
@@ -139,6 +142,8 @@ class Game(object):
 
   def register_services(self):
     self.di.Register("Console", lambda: MessageDisplay())
+
+
 
 g = Game('8x8.png')
 g.main_loop()
