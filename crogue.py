@@ -1,3 +1,4 @@
+from collections import UserList
 import sys
 import libtcodpy as libtcod
 from gobject import *
@@ -6,6 +7,7 @@ from map import Map
 from MessageDisplay import *
 import json
 import copy
+import listextenders
 
 class Game(object):
 
@@ -29,7 +31,8 @@ class Game(object):
     #Create a console to draw to the screen
     self.con = libtcod.console_new(self.screen_width, self.screen_height)
     self.player = Player(self.map.starting_pos[0], self.map.starting_pos[1])
-    self.objects = [self.player]
+    self.objects = UserList()
+    self.objects.append(self.player)
 
     self.Messages =  self.di.Request("Console")
     self.Messages.add_message("Game has been started.")
@@ -60,6 +63,10 @@ class Game(object):
       self.add_object_to_map(Item(0,0))
 
   def move_player(self, x, y):
+
+    if self.objects.exists(lambda obj: obj.blocks(self.player, x, y)):
+      return
+
     self.player.move(self.map, x, y)
     self.fov_recompute = True
 
@@ -125,18 +132,17 @@ class Game(object):
   def main_loop(self):
     while not libtcod.console_is_window_closed():
       libtcod.console_set_default_foreground(self.con, libtcod.white)
+
+      self.update_objects()
       self.render_all()
+      self.render_timers()
       libtcod.console_flush()
 
       for object in self.objects:
         object.clear(self.con)
 
+
       self.player_action = self.handle_keys()
-
-      self.update_objects()
-
-      self.render_timers()
-
       if self.player_action == "exit":
         break
 
@@ -148,7 +154,7 @@ class Game(object):
     libtcod.console_print(self.con,0,1,("Render Timer:  " + str(renderTime)).encode())
 
   def load_monsters(self):
-    file = open("Monsters.json")
+    file = open("./data/Monsters.json")
     monsterList = json.load(file)
     self.Monsters = []
     for m in monsterList["Monsters"]:
@@ -159,38 +165,6 @@ class Game(object):
     self.di.Register("Gui", lambda: Gui())
 
 
-class Gui(object):
-  _nwcorner = chr(201)
-  _necorner = chr(187)
-  _swcorner = chr(200)
-  _secorner = chr(188)
-  _vert = chr(186)
-  _hori = chr(205)
-
-  def draw_box(self, con, x, y, w, h):
-    libtcod.console_put_char(con,x,     y,      Gui._nwcorner)
-    libtcod.console_put_char(con,x,     h - 1,  Gui._swcorner)
-    libtcod.console_put_char(con,w - 1 , y,      Gui._necorner)
-    libtcod.console_put_char(con,w  - 1, h - 1  , Gui._secorner)
-    self.draw_vert(con,x, y + 1,  h - 2)
-    self.draw_vert(con,w - 1, y + 1,  h - 2)
-    self.draw_hori(con,x + 1, y ,  w - 2)
-    self.draw_hori(con,x + 1, h - 1,  w - 2)
-
-
-  def draw_vert(self, con, x, y, h):
-    libtcod.line_init(x,y,x,h)
-    (xc,yc) = (x,y)
-    while((xc,yc) != (None,None)):
-      libtcod.console_put_char(con,xc,yc,Gui._vert)
-      (xc,yc) = libtcod.line_step()
-
-  def draw_hori(self, con, x, y, w):
-    libtcod.line_init(x,y,w,y)
-    (xc,yc) = (x,y)
-    while((xc,yc) != (None,None)):
-      libtcod.console_put_char(con,xc,yc,Gui._hori)
-      (xc,yc) = libtcod.line_step()
 
 g = Game('8x8.png')
 g.main_loop()

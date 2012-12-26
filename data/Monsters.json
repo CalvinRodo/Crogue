@@ -1,0 +1,23 @@
+{
+    "Monsters": [
+        {
+            "Name" : "BelSnickle",
+            "Description" : "Have you been Impish or Admirable",
+            "Tile" : "B"
+        },
+        {
+            "Name" : "Krampus",
+            "Description" : "Punishes Naughty Boys",
+            "Tile" : "K"
+        },{
+            "Name" : "Amy",
+            "Description" : "My Fiance",
+            "Tile" : "A"
+        },
+        {
+            "Name" : "ZwartePiet",
+            "Description" : "I swear I'm not racist",
+            "Tile" : "Z"
+        }
+    ]
+}

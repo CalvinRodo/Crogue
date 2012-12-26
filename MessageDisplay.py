@@ -1,5 +1,5 @@
 from di import DI
-
+from Gui import Gui
 __author__ = 'calvin'
 import libtcodpy as libtcod
 import textwrap

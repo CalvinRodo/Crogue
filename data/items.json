@@ -1,0 +1,12 @@
+{
+    "Items" : [
+        {
+            "Name": "Cheese",
+            "Tile": "C"
+        },{
+            "Name": "Ray Gun",
+            "Tile": "/"
+        }
+    ]
+
+}
