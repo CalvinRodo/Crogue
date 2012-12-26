@@ -1,13 +1,18 @@
 import sys
 import libtcodpy as libtcod
 from gobject import *
+from di import DI
 from map import Map
+from MessageDisplay import *
 import json
 import copy
 
 class Game(object):
 
   def __init__(self, font):
+    self.di = DI()
+    self.register_services()
+
     self.screen_height = 60
     self.screen_width = 100
     self.gamefont = sys.path[0] + '/data/fonts/' + font
@@ -16,14 +21,18 @@ class Game(object):
     #create the root console
     libtcod.console_set_custom_font(self.gamefont.encode('utf-8'), libtcod.FONT_TYPE_GREYSCALE | libtcod.FONT_LAYOUT_ASCII_INROW)
     libtcod.console_init_root(self.screen_width, self.screen_height, 'crogue'.encode('utf-8'), False)
+
     #Create a console to draw to the screen
     self.con = libtcod.console_new(self.screen_width, self.screen_height)
     self.player = Player(self.map.starting_pos[0], self.map.starting_pos[1])
     self.objects = [self.player]
 
+    self.Messages =  self.di.Request("Console")
+    self.Messages.add_message("Game has been started.")
+
     self.load_monsters()
-    self.AddMonsters()
-    self.AddItems()
+    self.add_monsters()
+    self.add_items()
 
   def add_object_to_map(self, item):
     while True:
@@ -35,17 +44,16 @@ class Game(object):
     item.y = y
     self.objects.append(item)
 
-
-  def AddMonsters(self):
+  def add_monsters(self):
+    maxmonst = len(self.Monsters)  - 1
     for i in range(100):
-      ind = libtcod.random_get_int(0,0,1)
+      ind = libtcod.random_get_int(0,0,maxmonst)
       monster = copy.deepcopy(self.Monsters[ind])
       self.add_object_to_map(monster)
 
-  def AddItems(self):
+  def add_items(self):
     for i in range(100):
       self.add_object_to_map(Item(0,0))
-
 
   def handle_keys(self):
     key = libtcod.console_wait_for_keypress(True)
@@ -71,6 +79,7 @@ class Game(object):
 
   def render_all(self):
     self.render_timer1 = libtcod.sys_elapsed_milli()
+
     for object in self.objects:
       object.draw(self.con, self.map)
 
@@ -78,7 +87,14 @@ class Game(object):
       #recompute FOV if needed (the player moved or something)
       self.fov_recompute = False
       self.map.recompute_fov(self.player.x, self.player.y)
+
     self.map.draw(self.con)
+
+    messagePanel = self.Messages.render()
+
+    libtcod.console_blit(messagePanel,
+                         0, 0, self.Messages._maxWidth, self.Messages._maxHeight,
+                         self.con, 0, 46)
     libtcod.console_blit(self.con, 0, 0, self.screen_width, self.screen_height, 0, 0, 0)
     self.render_timer2 = libtcod.sys_elapsed_milli()
 
@@ -101,8 +117,6 @@ class Game(object):
       for object in self.objects:
         object.clear(self.con)
 
-
-
       exit = self.handle_keys()
       self.update_objects()
       self.render_timers()
@@ -122,6 +136,9 @@ class Game(object):
     self.Monsters = []
     for m in monsterList["Monsters"]:
       self.Monsters.append(Monster.create_from_dict(m))
+
+  def register_services(self):
+    self.di.Register("Console", lambda: MessageDisplay())
 
 g = Game('8x8.png')
 g.main_loop()

@@ -1,4 +1,5 @@
 import libtcodpy as libtcod
+from di import DI
 
 class GObject(object):
   #this is a generic object: the player, a monster, an item, the stairs...
@@ -37,6 +38,7 @@ class Player(GObject):
       return
     if isinstance(object, Monster):
       object.Alive = False
+      object.kill_message()
     if isinstance(object, Item):
       self.add_to_inventory(object)
 
@@ -52,11 +54,15 @@ class Item(GObject):
   def in_container(self,flag):
     self.in_inventory = flag
 
-
 class Monster(GObject):
   def __init__(self,x,y):
     GObject.__init__(self,x,y,'m',libtcod.darkest_green)
     self.Alive = True
+    di = DI()
+    self.Messages = di.Request("Console")
+
+  def kill_message(self):
+    self.Messages.add_message(self.Name + " was killed!")
 
   @staticmethod
   def create_from_dict(dict):

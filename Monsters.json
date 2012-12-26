@@ -9,6 +9,10 @@
             "Name" : "Krampus",
             "Description" : "Punishes Naughty Boys",
             "Tile" : "K"
+        },{
+            "Name" : "Amy",
+            "Description" : "My Fiance",
+            "Tile" : "A"
         }
     ]
 }
